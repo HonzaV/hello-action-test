@@ -1,13 +1,10 @@
 # hello-action-test
 
-Composite action that prints the latest commit message.
+Composite action that prints the latest commit message. It checks out the repository itself, so no separate checkout step is needed.
 
 ## Usage
 
 ```yaml
 steps:
-  - uses: actions/checkout@v4
   - uses: HonzaV/hello-action-test@v1
 ```
-
-The repository must be checked out first, since the action reads the commit message with `git log`.

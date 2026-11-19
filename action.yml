@@ -5,6 +5,9 @@ author: HonzaV
 runs:
   using: composite
   steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
     - name: Print latest commit message
       shell: bash
       run: |
