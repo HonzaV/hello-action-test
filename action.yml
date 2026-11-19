@@ -1,0 +1,12 @@
+name: Hello World
+description: Prints the latest commit message of the checked-out repository.
+author: HonzaV
+
+runs:
+  using: composite
+  steps:
+    - name: Print latest commit message
+      shell: bash
+      run: |
+        echo "Hello, World! Latest commit message:"
+        git log -1 --pretty=%B
